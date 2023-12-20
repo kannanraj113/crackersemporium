@@ -1,13 +1,13 @@
 <?php return array(
     'root' => array(
         'name' => 'drupal/legacy-project',
-        'pretty_version' => '9.5.11',
-        'version' => '9.5.11.0',
-        'reference' => '80f95f06d5c580915bea06ca51382277b57828cb',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '87701564321d1cad570e71e37ae1a250dbb1b18e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'dev' => false,
+        'dev' => true,
     ),
     'versions' => array(
         'asm89/stack-cors' => array(
@@ -61,6 +61,15 @@
             'reference' => '6bcea3e81ab8b3d0abe5fde5300bbc8a968960c7',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/reflection',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/belgrade' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'reference' => '2.0.0',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../themes/contrib/belgrade',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -260,9 +269,9 @@
             ),
         ),
         'drupal/legacy-project' => array(
-            'pretty_version' => '9.5.11',
-            'version' => '9.5.11.0',
-            'reference' => '80f95f06d5c580915bea06ca51382277b57828cb',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '87701564321d1cad570e71e37ae1a250dbb1b18e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
