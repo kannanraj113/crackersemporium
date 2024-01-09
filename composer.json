@@ -19,6 +19,8 @@
         "drupal/admin_toolbar": "^3.4",
         "drupal/belgrade": "^2.0",
         "drupal/commerce": "^2.36",
+        "drupal/commerce_paypal": "^1.7",
+        "drupal/commerce_stripe": "^1.1",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
