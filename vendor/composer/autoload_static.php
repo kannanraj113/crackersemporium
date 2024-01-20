@@ -134,6 +134,10 @@ class ComposerStaticInit7cbfc0cc26fe341a5adcab3d1927266c
             'CommerceGuys\\Intl\\' => 18,
             'CommerceGuys\\Addressing\\' => 24,
         ),
+        'B' => 
+        array (
+            'Braintree\\' => 10,
+        ),
         'A' => 
         array (
             'Asm89\\Stack\\' => 12,
@@ -389,6 +393,10 @@ class ComposerStaticInit7cbfc0cc26fe341a5adcab3d1927266c
         'CommerceGuys\\Addressing\\' => 
         array (
             0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
+        ),
+        'Braintree\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree',
         ),
         'Asm89\\Stack\\' => 
         array (
