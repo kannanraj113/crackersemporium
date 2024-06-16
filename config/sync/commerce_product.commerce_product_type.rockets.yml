@@ -1,0 +1,14 @@
+uuid: 03bf7829-2d27-4884-bb07-79c53ea76d68
+langcode: en
+status: true
+dependencies: {  }
+id: rockets
+label: Rockets
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

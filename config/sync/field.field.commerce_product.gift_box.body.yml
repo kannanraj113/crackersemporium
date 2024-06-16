@@ -1,0 +1,23 @@
+uuid: c95db302-3825-4c61-b8ea-97cd938e5c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.gift_box
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.gift_box.body
+field_name: body
+entity_type: commerce_product
+bundle: gift_box
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

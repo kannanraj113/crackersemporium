@@ -1,0 +1,23 @@
+uuid: cf72f2bf-aa6c-4533-a781-c1db8a4134c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rockets
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.rockets.body
+field_name: body
+entity_type: commerce_product
+bundle: rockets
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,14 @@
+uuid: dd99b1d3-36b4-4b19-b113-629f84a4edb9
+langcode: en
+status: true
+dependencies: {  }
+id: sky_shots
+label: 'Sky Shots'
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

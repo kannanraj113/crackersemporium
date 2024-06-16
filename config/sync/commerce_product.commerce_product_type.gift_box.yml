@@ -1,0 +1,14 @@
+uuid: 6c505955-9f06-4f4e-922f-757df82201d0
+langcode: en
+status: true
+dependencies: {  }
+id: gift_box
+label: 'Gift box'
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

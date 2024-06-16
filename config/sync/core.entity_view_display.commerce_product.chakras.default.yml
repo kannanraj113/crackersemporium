@@ -1,0 +1,44 @@
+uuid: 50e90c35-1943-44f0-bbf0-1a9cb9ce9c41
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.chakras
+    - field.field.commerce_product.chakras.body
+    - field.field.commerce_product.chakras.field_product_image
+  module:
+    - commerce_product
+    - text
+id: commerce_product.chakras.default
+targetEntityType: commerce_product
+bundle: chakras
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_product_image: true
+  stores: true
+  uid: true

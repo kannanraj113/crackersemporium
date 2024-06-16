@@ -1,0 +1,23 @@
+uuid: 79f1cf65-5bc8-4689-90b1-650665678921
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.sky_shots
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.sky_shots.body
+field_name: body
+entity_type: commerce_product
+bundle: sky_shots
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,55 @@
+uuid: 9974064e-32dd-4a84-88ad-05b8b2798a3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.flower_pots
+    - field.field.commerce_product.flower_pots.body
+    - field.field.commerce_product.flower_pots.field_product_image
+  module:
+    - commerce_product
+    - image
+    - text
+id: commerce_product.flower_pots.default
+targetEntityType: commerce_product
+bundle: flower_pots
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_product_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true
