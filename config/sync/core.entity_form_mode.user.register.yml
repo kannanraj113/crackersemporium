@@ -1,0 +1,13 @@
+uuid: 967d8483-53aa-4854-9602-530520bd3ab8
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
+id: user.register
+label: Register
+description: ''
+targetEntityType: user
+cache: true

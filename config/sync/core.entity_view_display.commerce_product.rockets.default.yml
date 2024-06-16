@@ -1,0 +1,55 @@
+uuid: bd2507ce-50b2-4740-bb5d-4dc0d05b661a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rockets
+    - field.field.commerce_product.rockets.body
+    - field.field.commerce_product.rockets.field_product_image
+  module:
+    - commerce_product
+    - image
+    - text
+id: commerce_product.rockets.default
+targetEntityType: commerce_product
+bundle: rockets
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_product_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true

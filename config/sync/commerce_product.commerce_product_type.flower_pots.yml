@@ -1,0 +1,14 @@
+uuid: d0254453-210e-40df-bf32-61d808d2cdd1
+langcode: en
+status: true
+dependencies: {  }
+id: flower_pots
+label: 'Flower Pots'
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

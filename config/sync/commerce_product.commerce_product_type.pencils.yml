@@ -1,0 +1,14 @@
+uuid: 50200b26-f5bd-4672-8526-889e7c0567ab
+langcode: en
+status: true
+dependencies: {  }
+id: pencils
+label: Pencils
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

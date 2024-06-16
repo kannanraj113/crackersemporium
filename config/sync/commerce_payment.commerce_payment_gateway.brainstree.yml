@@ -1,0 +1,25 @@
+uuid: 9af5c7a9-403e-4e66-a696-5860a6d03324
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_braintree
+id: brainstree
+label: Brainstree
+weight: null
+plugin: braintree_hostedfields
+configuration:
+  display_label: Braintree
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  merchant_id: rybzgkyfvfstysz2
+  public_key: kq35ggrftjmm3z79
+  private_key: f78fa09c04e59d9a9c6d57c4d4d73872
+  merchant_account_id:
+    INR: crackers
+  3d_secure: ''
+  enable_credit_card_icons: true
+conditions: {  }
+conditionOperator: AND

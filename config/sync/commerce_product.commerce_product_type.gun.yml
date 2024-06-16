@@ -1,0 +1,14 @@
+uuid: 836b7f9d-812a-47d3-86ce-6e5042a9cf59
+langcode: en
+status: true
+dependencies: {  }
+id: gun
+label: Gun
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

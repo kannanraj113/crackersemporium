@@ -22,11 +22,12 @@
         "drupal/commerce_braintree": "^1.5",
         "drupal/commerce_paypal": "^1.7",
         "drupal/commerce_stripe": "^1.1",
-        "drupal/core-composer-scaffold": "^9.5",
-        "drupal/core-project-message": "^9.5",
-        "drupal/core-recommended": "^9.5",
+        "drupal/core-composer-scaffold": "10.2.7",
+        "drupal/core-project-message": "10.2.7",
+        "drupal/core-recommended": "10.2.7",
         "drupal/core-vendor-hardening": "^9.5",
-        "drupal/inline_entity_form": "^1.0@RC"
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drush/drush": "^12.5"
     },
     "conflict": {
         "drupal/drupal": "*"
