@@ -15,12 +15,12 @@
 # Generally you should only ignore the root vendor directory. It's important
 # that core/assets/vendor and any other vendor directories within contrib or
 # custom module, theme, etc., are not ignored unless you purposely do so.
-vendor/
-/web/core
-/web/libraries
-/web/modules/contrib
-/web/themes/contrib
-/web/profiles/contrib
+/vendor/
+/core
+/libraries
+/modules/contrib
+/themes/contrib
+/profiles/contrib
 
 # ddev and docksal
 .ddev
@@ -42,20 +42,20 @@ sites/simpletest
 # Ignore scaffold files
 .gitattributes
 .editorconfig
-web/.eslintrc.json
-web/INSTALL.txt
-web/README.txt
-web/example.gitignore
-web/.csslintrc
-web/.editorconfig
-web/.eslintignore
-web/.eslintrc
-web/.htaccess
-web/.ht.router.php
-web/autoload.php
-web/index.php
-web/update.php
-web/web.config
+.eslintrc.json
+INSTALL.txt
+README.txt
+example.gitignore
+.csslintrc
+.editorconfig
+.eslintignore
+.eslintrc
+.htaccess
+.ht.router.php
+autoload.php
+index.php
+update.php
+web.config
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/
