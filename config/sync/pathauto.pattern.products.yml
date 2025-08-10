@@ -1,0 +1,22 @@
+uuid: 754e4659-6692-42f9-ad16-f7f6589f870e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: products
+label: Products
+type: 'canonical_entities:commerce_product'
+pattern: '/product/[commerce_product:title]'
+selection_criteria:
+  06fe2ce1-2818-4cf5-9c80-3151fc1ca224:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: 06fe2ce1-2818-4cf5-9c80-3151fc1ca224
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      default: default
+selection_logic: and
+weight: -5
+relationships: {  }

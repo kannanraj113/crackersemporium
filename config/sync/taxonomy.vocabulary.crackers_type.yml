@@ -1,0 +1,9 @@
+uuid: ac1c127a-8b85-470f-9242-74ff68ab439c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Crackers Type'
+vid: crackers_type
+description: null
+weight: 0
+new_revision: false

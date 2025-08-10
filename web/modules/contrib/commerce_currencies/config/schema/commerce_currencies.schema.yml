@@ -1,0 +1,54 @@
+field.field_settings.commerce_currencies_price:
+  type: mapping
+  label: 'Price field settings'
+  mapping:
+    allow_negative:
+      type: boolean
+      label: 'Allow negative prices'
+
+field.formatter.settings.commerce_currencies_price_default:
+  type: mapping
+  label: 'Default price formatter settings'
+  mapping:
+    strip_trailing_zeroes:
+      type: boolean
+      label: 'Strip trailing zeroes after the decimal point'
+    show_all_currencies:
+      type: boolean
+      label: 'Show all currencies'
+    missing_price:
+      type: string
+      label: 'When price is missing'
+    currency_display:
+      type: string
+      label: 'Currency display'
+
+field.formatter.settings.commerce_currencies_preferred_default:
+  type: mapping
+  label: 'Default preferred currency settings'
+  mapping:
+    currency_display:
+      type: string
+      label: 'Currency display'
+
+block.settings.commerce_currencies_selector:
+  type: block_settings
+  label: 'Currency selector settings'
+  mapping:
+    list_style:
+      type: string
+      label: 'Currency list style'
+    list_names:
+      type: string
+      label: 'Currency names'
+    use_submit:
+      type: boolean
+      label: 'Use submit button'
+
+commerce_tax_type.*.third_party.commerce_currencies:
+  type: mapping
+  label: 'Applicable currencies'
+  mapping:
+    currencies:
+      type: boolean
+      label: 'Applicable currencies'

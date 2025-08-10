@@ -1,0 +1,22 @@
+uuid: 50b13f15-17e6-491b-8040-aab96cf86255
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: crackers_type
+label: 'Crackers Type'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/product-type/[term:name]'
+selection_criteria:
+  9ed0571c-33ea-44e3-91f4-d45c73d51ef7:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 9ed0571c-33ea-44e3-91f4-d45c73d51ef7
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      crackers_type: crackers_type
+selection_logic: and
+weight: -5
+relationships: {  }

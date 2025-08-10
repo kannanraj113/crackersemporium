@@ -1,0 +1,12 @@
+{
+  "name": "drupal/commerce_currencies",
+  "type": "drupal-module",
+  "description": "Multi-currency support for Drupal Commerce 2.",
+  "homepage": "https://drupal.org/project/commerce_currencies",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/commerce": "^2.11",
+    "drupal/commerce_price": "^2.11"
+  },
+  "minimum-stability": "dev"
+}
