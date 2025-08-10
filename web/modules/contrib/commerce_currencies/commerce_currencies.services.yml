@@ -1,0 +1,64 @@
+services:
+  commerce_currencies.current_currency:
+    class: Drupal\commerce_currencies\CurrentCurrency
+    arguments: [ '@current_user', '@request_stack', '@commerce_store.current_store', '@entity_type.manager' ]
+
+  commerce_currencies.price_resolver:
+    class: Drupal\commerce_currencies\Resolver\CommerceCurrenciesResolver
+    arguments: [ '@commerce_currencies.current_currency', '@router.admin_context' ]
+    tags:
+      - { name: commerce_price.price_resolver, priority: 99 }
+
+  commerce_currencies.exchanger_resolver:
+    class: Drupal\commerce_currencies\Resolver\CommerceExchangerResolver
+    arguments: [ '@commerce_currencies.current_currency', '@router.admin_context', '@module_handler' ]
+    tags:
+      - { name: commerce_price.price_resolver, priority: 98 }
+
+  commerce_currencies.order_refresh:
+    class: Drupal\commerce_currencies\EventSubscriber\CommerceCurrenciesOrderRefresh
+    arguments: [ '@commerce_currencies.current_currency', '@router.admin_context', '@current_user', '@commerce_order.order_refresh' ]
+    tags:
+      - { name: event_subscriber }
+
+  commerce_currencies.order_processor:
+    class: Drupal\commerce_currencies\Processor\CommerceCurrenciesOrderProcessor
+    arguments: [ '@commerce_currencies.current_currency', '@router.admin_context', '@current_user', '@commerce_price.chain_price_resolver', '@module_handler' ]
+    tags:
+      - { name: commerce_order.order_processor, priority: 0 }
+
+  commerce_currencies.safe_early_order_processor:
+    class: Drupal\commerce_currencies\Processor\SafeEarlyOrderProcessor
+    decorates: commerce_shipping.early_order_processor
+    arguments: [ '@commerce_currencies.safe_early_order_processor.inner', '@entity_type.manager', '@commerce_shipping.order_manager', '@commerce_shipping.shipment_manager' ]
+
+  commerce_currencies.safe_late_order_processor:
+    class: Drupal\commerce_currencies\Processor\SafeLateOrderProcessor
+    decorates: commerce_shipping.late_order_processor
+    arguments: [ '@commerce_currencies.safe_late_order_processor.inner', '@commerce_shipping.order_manager' ]
+
+  commerce_currencies.safe_tax_order_processor:
+    class: Drupal\commerce_currencies\Processor\SafeTaxOrderProcessor
+    decorates: commerce_tax.tax_order_processor
+    arguments: [ '@commerce_currencies.safe_tax_order_processor.inner', '@entity_type.manager', '@commerce_price.rounder', '@commerce_tax.store_tax' ]
+
+  commerce_currencies.safe_promotion_order_processor:
+    class: Drupal\commerce_currencies\Processor\SafePromotionOrderProcessor
+    decorates: commerce_promotion.promotion_order_processor
+    arguments: [ '@commerce_currencies.safe_promotion_order_processor.inner', '@commerce_currencies.safe_promotion_order_processor.inner', '@entity_type.manager', '@language_manager' ]
+
+  commerce_currencies.safe_payment_order_processor:
+    class: Drupal\commerce_currencies\Processor\SafePaymentOrderProcessor
+    decorates: commerce_payment.order_processor
+    arguments: [ '@commerce_currencies.safe_payment_order_processor.inner', '@commerce_payment.order_updater' ]
+
+  cache_context.currency:
+    class: Drupal\commerce_currencies\Cache\Context\CurrencyCacheContext
+    arguments: [ '@commerce_currencies.current_currency' ]
+    tags:
+      - { name: cache.context }
+
+  commerce_currencies.module_installer:
+    class: Drupal\commerce_currencies\Uninstaller
+    decorates: module_installer
+    arguments: [ '@commerce_currencies.module_installer.inner', '%app.root%', '@module_handler', '@kernel', '@database', '@update.update_hook_registry', '@logger.channel.default' ]

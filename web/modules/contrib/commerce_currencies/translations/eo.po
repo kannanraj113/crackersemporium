@@ -1,0 +1,468 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  commerce_currencies.module: n/a
+#  commerce_currencies.info.yml: n/a
+#  commerce_currencies.routing.yml: n/a
+#  config/schema/commerce_currencies.schema.yml: n/a
+#  src/Plugin/Field/FieldType/CurrenciesPriceItem.php: n/a
+#  src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php: n/a
+#  src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php: n/a
+#  src/Plugin/Block/CurrencySelectorBlock.php: n/a
+#  src/Uninstaller.php: n/a
+#  src/Cache/Context/CurrencyCacheContext.php: n/a
+#  src/Plugin/Field/FieldWidget/PreferredCurrencyDefaultWidget.php: n/a
+#  src/Plugin/Commerce/Condition/CurrentCurrencyCondition.php: n/a
+#  src/Form/CurrencySelectorForm.php: n/a
+#  src/Plugin/Field/FieldWidget/CurrenciesPriceDefaultWidget.php: n/a
+#  src/Plugin/Field/FieldType/PreferredCurrency.php: n/a
+#  src/Plugin/Field/FieldWidget/CurrenciesPriceListWidget.php: n/a
+#  src/Processor/CommerceCurrenciesOrderProcessor.php: n/a
+#  src/Processor/SafeEarlyOrderProcessor.php: n/a
+#  src/Processor/SafeLateOrderProcessor.php: n/a
+#  src/Processor/SafePaymentOrderProcessor.php: n/a
+#  src/Processor/SafePromotionOrderProcessor.php: n/a
+#  src/Processor/SafeTaxOrderProcessor.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Commerce Currencies\n"
+"POT-Creation-Date: 2024-07-09 16:49+0200\n"
+"PO-Revision-Date: 2024-07-11 13:41+0200\n"
+"Last-Translator: DEÁK JAHN, Gábor <djgtram@gmail.com>\n"
+"Language-Team: Esperanto\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: commerce_currencies.module:19
+msgid "After installation"
+msgstr "Post instalado"
+
+#: commerce_currencies.module:20
+msgid ""
+"Upon installation, existing commerce entities (product types, variations, "
+"etc) were scanned and the original, single-currency <kbd>commerce_price</"
+"kbd> fields got replaced with new, multi-currency variants. Widgets (single "
+"or list price) and display settings were also modified. Previously existing "
+"prices were migrated to the new setup. In a stock Commerce store, this "
+"already means fully functional multi-currency operation, you don't need any "
+"other change."
+msgstr ""
+"Post instalado, ekzistantaj komercaj entoj (produktaj specoj, varioj, ktp) "
+"estis skanitaj kaj la originalaj, unuvalutaj <kbd>commerce_price</kbd> "
+"kampoj estis anstataŭigitaj per novaj, plurvalutaj variantoj. Fenestraĵoj "
+"(ununura aŭ listprezo) kaj vidigaj agordoj ankaŭ estis modifitaj. Antaŭe "
+"ekzistantaj prezoj estis migritaj al la nova aranĝo. En kutima Commerce "
+"vendejo, tio jam signifas plene funkciantan plurvalutan operacion, vi ne "
+"bezonas alian ŝanĝon."
+
+#: commerce_currencies.module:21
+msgid ""
+"If you use custom entities, either created in the UI or from code, make sure "
+"you replace old <kbd>commerce_price</kbd> fields with the new "
+"<kbd>commerce_currencies_price</kbd> type. They appear in the usual field UI "
+"among the Commerce related field types as <em>Price (multi-currency)</em>."
+msgstr ""
+"Se vi uzas viajn proprajn entojn, ĉu kreitajn en la UI aŭ en kodo, nepre "
+"anstataŭiu malnovajn <kbd>commerce_price-</kbd> kampojn per la nova tipo "
+"<kbd>commerce_currencies_price</kbd>. Ili aperas en la kutima interfaco de "
+"kampoj inter la Commerce rilataj kampospecoj kiel <em>Prezo (plurvaluta)</"
+"em> ."
+
+#: commerce_currencies.module:22
+msgid ""
+"Also take care of custom theme templates referencing the old <kbd>price</"
+"kbd> and <kbd>list_price</kbd> fields, the new, automatically created ones "
+"have the names <kbd>commerce_currencies_price</kbd> and "
+"<kbd>commerce_currencies_list_price</kbd>."
+msgstr ""
+"Ankaŭ zorgu pri kutimaj ŝablonoj referencantaj la malnovajn kampojn "
+"<kbd>price</kbd> kaj <kbd>list_price</kbd>, la novaj aŭtomate kreitaj havas "
+"la nomojn <kbd>commerce_currencies_price</kbd> kaj "
+"<kbd>commerce_currencies_list_price</kbd>."
+
+#: commerce_currencies.module:40
+msgid "List price"
+msgstr "Lista prezo"
+
+#: commerce_currencies.module:41;50
+msgid "Multi-currency price"
+msgstr "Plurvaluta prezo"
+
+#: commerce_currencies.module:49
+msgid "Price"
+msgstr "Prezo"
+
+#: commerce_currencies.module:186
+msgid ""
+"Price fields replaced with multi-currency ones in form display \"@type."
+"@bundle.@mode\"."
+msgstr ""
+"Prezokampoj anstataŭigitaj per plurvalutaj en la formularo \"@type.@bundle."
+"@mode\"."
+
+#: commerce_currencies.module:203
+msgid ""
+"Price fields replaced with multi-currency ones in view display \"@type."
+"@bundle.@mode\"."
+msgstr ""
+"Prezokampoj anstataŭigitaj per plurvalutaj en la vidigo \"@type.@bundle."
+"@mode\"."
+
+#: commerce_currencies.module:264
+msgid "Error copying existing single-currency prices"
+msgstr "Eraro dum kopiado de ekzistantaj unuvalutaj prezoj"
+
+#: commerce_currencies.module:310
+msgid "Migrating single-currency prices to multi-currency fields."
+msgstr "Kopiado de unuvalutaj prezoj al plurvalutaj kampoj."
+
+#: commerce_currencies.module:325
+msgid ""
+"Price fields replaced with multi-currency ones, single-currency prices "
+"migrated."
+msgstr ""
+"Prezokampoj anstataŭigitaj per plurvalutaj, unuvalutaj prezoj kopiitaj."
+
+#: commerce_currencies.module:327
+msgid "An error occurred while setting up the multi-currency prices."
+msgstr "Okazis eraro dum la agordo de plurvalutaj prezoj."
+
+#: commerce_currencies.module:375
+msgid "EU countries"
+msgstr "EU-ŝtatoj"
+
+#: commerce_currencies.module:433
+msgid ""
+"You should prefer the Current currency condition for proper multi-currency "
+"operation."
+msgstr ""
+"Vi devus prefere uzi la kondiĉon Aktuala valuto por adekvata plurvaluta "
+"funckiado."
+
+#: commerce_currencies.info.yml:0
+msgid "Commerce Currencies"
+msgstr "Commerce Valutoj"
+
+#: commerce_currencies.info.yml:0
+msgid "Multi-currency support for Drupal Commerce 2."
+msgstr "Plurvaluta subteno por Drupal Commerce 2."
+
+#: config/schema/commerce_currencies.schema.yml:0
+msgid "Price field settings"
+msgstr "Agordoj de prezokampo"
+
+#: config/schema/commerce_currencies.schema.yml:0
+#: src/Plugin/Field/FieldType/CurrenciesPriceItem.php:75
+msgid "Allow negative prices"
+msgstr "Akceptu negativajn prezojn"
+
+#: config/schema/commerce_currencies.schema.yml:0
+msgid "Default price formatter settings"
+msgstr "Defaŭltaj prezo-formatilaj agordoj"
+
+#: config/schema/commerce_currencies.schema.yml:0
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:71
+msgid "Strip trailing zeroes after the decimal point"
+msgstr "Forigi nulojn post la dekuma punkto"
+
+#: config/schema/commerce_currencies.schema.yml:0
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:76
+msgid "Show all currencies"
+msgstr "Montru ĉiujn valutojn"
+
+#: config/schema/commerce_currencies.schema.yml:0
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:83
+msgid "When price is missing"
+msgstr "Se la prezo mankas"
+
+#: config/schema/commerce_currencies.schema.yml:0;0
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:100
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:34
+msgid "Currency display"
+msgstr "Vidigo de valuto"
+
+#: config/schema/commerce_currencies.schema.yml:0
+msgid "Default preferred currency settings"
+msgstr "Defaŭltaj agordoj de preferata valuto"
+
+#: config/schema/commerce_currencies.schema.yml:0
+msgid "Currency selector settings"
+msgstr "Agordoj de valutoselektilo"
+
+#: config/schema/commerce_currencies.schema.yml:0
+#: src/Plugin/Block/CurrencySelectorBlock.php:66
+msgid "Currency list style"
+msgstr "Stilo de valutolisto"
+
+#: config/schema/commerce_currencies.schema.yml:0
+#: src/Plugin/Block/CurrencySelectorBlock.php:75
+msgid "Currency names"
+msgstr "Nomoj de valutoj"
+
+#: config/schema/commerce_currencies.schema.yml:0
+msgid "Use submit button"
+msgstr "Uzu butonon"
+
+#: config/schema/commerce_currencies.schema.yml:0;0
+msgid "Applicable currencies"
+msgstr "Akcepteblaj valutoj"
+
+#: src/Uninstaller.php:64
+msgid "Original price fields restored."
+msgstr "Originaj prezokampoj restarigitaj."
+
+#: src/Uninstaller.php:70
+msgid "Run cron before attempting to uninstall again."
+msgstr "Antaŭ ol denove provi la malinstaladon, startu la tempumitajn taskojn."
+
+#: src/Uninstaller.php:123
+msgid "Configuration updates"
+msgstr "Ĝisdatigotaj agordoj"
+
+#: src/Uninstaller.php:124
+msgid "The listed configuration will be updated."
+msgstr "La listigitaj agordoj estos ĝisdatigitaj."
+
+#: src/Uninstaller.php:161
+msgid "Configuration deletions"
+msgstr "Forigotaj agordoj"
+
+#: src/Uninstaller.php:162
+msgid "The listed configuration will be deleted."
+msgstr "La listigitaj agordoj estos forigitaj."
+
+#: src/Cache/Context/CurrencyCacheContext.php:24
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:10
+#: src/Plugin/Field/FieldWidget/PreferredCurrencyDefaultWidget.php:11
+msgid "Currency"
+msgstr "Valuto"
+
+#: src/Plugin/Commerce/Condition/CurrentCurrencyCondition.php:12
+msgctxt "Commerce"
+msgid "Currency"
+msgstr "Valutoj"
+
+#: src/Form/CurrencySelectorForm.php:67
+msgid "Select"
+msgstr "Ŝanĝi"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:68
+msgid "Radio buttons"
+msgstr "Radiobutonoj"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:69
+msgid "List"
+msgstr "Listo"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:77
+msgid "Name"
+msgstr "Nomo"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:78
+msgid "Code"
+msgstr "Kodo"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:79
+msgid "Both"
+msgstr "Ambaŭ"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:85
+msgid "Use <em>Select</em> button"
+msgstr "Uzu butonon por ŝanĝi"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:86
+msgid "Without button, the currency will be changed immediately on selection"
+msgstr "Sen butono la nova valuto estos tuj akceptita"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:14
+msgid "Currency selector"
+msgstr "Valutoselektilo"
+
+#: src/Plugin/Block/CurrencySelectorBlock.php:14
+msgid "Commerce"
+msgstr "Commerce"
+
+#: src/Plugin/Commerce/Condition/CurrentCurrencyCondition.php:59
+msgid "Currencies"
+msgstr "Valutoj"
+
+#: src/Plugin/Commerce/Condition/CurrentCurrencyCondition.php:12
+msgid "Current currency"
+msgstr "Aktuala valuto"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:85
+msgid "Show store default currency"
+msgstr "Montru la bazan valuton de la vendejo"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:86
+msgid "Call resolvers (eg. exchanger)"
+msgstr "Voki solvilojn (ekz. kurzoŝanĝilo)"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:87
+msgid "Show any price"
+msgstr "Montru ajnan prezon"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:88
+msgid "Dash"
+msgstr "Streko"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:89
+msgid "Leave empty"
+msgstr "Nenio"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:102;140
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:36;52
+msgid "Symbol (e.g. \"$\")"
+msgstr "Simbolo (ekz. \"$\")"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:103;141
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:38;54
+msgid "Currency code (e.g. \"USD\")"
+msgstr "Kodo (ekz. \"USD\")"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:104;142
+msgid "None"
+msgstr "Nenio"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:116
+msgid "Show prices in all currencies."
+msgstr "Montru prezojn en ĉiuj valutoj."
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:120
+msgid "default currency price"
+msgstr "prezon de la defaûlta valuto"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:121
+msgid "resolved price"
+msgstr "solvitan prezon"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:122
+msgid "any price"
+msgstr "ajnan prezon"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:123
+msgid "dash"
+msgstr "strekon"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:124
+msgid "empty"
+msgstr "nenion"
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:126
+msgid "Only show the price in the selected currency."
+msgstr "Montru nur la prezon de la aktuala valuto."
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:127
+msgid "Display @missing_price when missing."
+msgstr "Montru @missing_price kiam mankas."
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:133
+msgid "Strip trailing zeroes after the decimal point."
+msgstr "Forigi nulojn post la dekuma punkto."
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:135
+msgid "Do not strip trailing zeroes after the decimal point."
+msgstr "Ne forigi nulojn post la dekuma punkto."
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:144
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:57
+msgid "Currency display: @currency_display."
+msgstr "Valuto-montrado: @currency_display."
+
+#: src/Plugin/Field/FieldFormatter/CurrenciesPriceDefaultFormatter.php:16
+msgid "Multi-currency"
+msgstr "Plurvaluta"
+
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:37;53
+msgid "Currency name (e.g. \"US Dollar\")"
+msgstr "Nomo de valuto (ekz. \"US-dolaro\")"
+
+#: src/Plugin/Field/FieldFormatter/PreferredCurrencyDefaultFormatter.php:39;55
+msgid "Currency name and code (e.g. \"US dollar (USD)\")"
+msgstr "Nomo kaj kodo de valuto (ekz. \"US-dolaro (USD)\")"
+
+#: src/Plugin/Field/FieldType/CurrenciesPriceItem.php:53
+msgid "Prices data"
+msgstr "Datumoj de prezoj"
+
+#: src/Plugin/Field/FieldType/CurrenciesPriceItem.php:11
+#: src/Plugin/Field/FieldWidget/CurrenciesPriceDefaultWidget.php:8
+msgid "Price (multi-currency)"
+msgstr "Prezo (plurvaluta)"
+
+#: src/Plugin/Field/FieldType/CurrenciesPriceItem.php:11
+msgid "Stores multi-currency prices."
+msgstr "Stokas plurvalutajn prezojn."
+
+#: src/Plugin/Field/FieldType/PreferredCurrency.php:50
+msgid "Currency code"
+msgstr "Valutokodo"
+
+#: src/Plugin/Field/FieldType/PreferredCurrency.php:9
+#: src/Plugin/Field/FieldWidget/PreferredCurrencyDefaultWidget.php:54
+msgid "Preferred currency"
+msgstr "Preferata valuto"
+
+#: src/Plugin/Field/FieldType/PreferredCurrency.php:9
+msgid "Stores the preferred currency of the user."
+msgstr "Stokas la preferatan valuton de la uzanto."
+
+#: src/Plugin/Field/FieldWidget/CurrenciesPriceListWidget.php:31
+msgid "Provide a list price"
+msgstr "Aldonu listan prezon"
+
+#: src/Plugin/Field/FieldWidget/CurrenciesPriceListWidget.php:8
+msgid "List price (multi-currency)"
+msgstr "Lista prezo (plurvaluta)"
+
+#: src/Processor/CommerceCurrenciesOrderProcessor.php:82
+msgid "Price reinterpreted as @currency"
+msgstr "Prezo reinterpretita kiel @currency"
+
+#: src/Processor/SafeEarlyOrderProcessor.php:40
+#: src/Processor/SafeLateOrderProcessor.php:41
+msgid ""
+"FATAL ERROR in the configuration of a shipment method! Check that you use a "
+"Current currency condition rather than an Order currency one. @error"
+msgstr ""
+"FATALA ERARO en la agordo de livermetodo! Kontrolu, ke vi uzas la kondiĉon "
+"Aktuala valuto kaj ne Mendovaluto. @error"
+
+#: src/Processor/SafeLateOrderProcessor.php:38
+msgid ""
+"If you changed currencies, remember to press <em>Recalculate shipping "
+"methods</em> on the checkout page!"
+msgstr ""
+"Se vi ŝanĝis valuton, ne forgesu premi <em>Rekalkulu livermetodojn</em> sur "
+"la pagpaĝo!"
+
+#: src/Processor/SafePaymentOrderProcessor.php:38
+msgid ""
+"FATAL ERROR in the configuration of a payment method! Check that you use a "
+"Current currency condition rather than an Order currency one. @error"
+msgstr ""
+"FATALA ERARO en la agordo de pagmaniero! Kontrolu, ke vi uzas la kondiĉon "
+"Aktuala valuto kaj ne Mendovaluto. @error"
+
+#: src/Processor/SafePromotionOrderProcessor.php:42;54
+msgid ""
+"FATAL ERROR in the configuration of a promotion! Check that you use a "
+"Current currency condition rather than an Order currency one. @error"
+msgstr ""
+"FATALA ERARO en la agordo de rabato! Kontrolu, ke vi uzas la kondiĉon "
+"Aktuala valuto kaj ne Mendovaluto. @error"
+
+#: src/Processor/SafeTaxOrderProcessor.php:40
+msgid ""
+"FATAL ERROR in the configuration of a tax type! Check that you use a Current "
+"currency condition rather than an Order currency one. @error"
+msgstr ""
+"FATALA ERARO en la agordo de impoŝta tipo! Kontrolu, ke vi uzas la kondiĉon "
+"Aktuala valuto kaj ne Mendovaluto. @error"

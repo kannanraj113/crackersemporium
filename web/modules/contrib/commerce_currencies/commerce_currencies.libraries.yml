@@ -1,0 +1,5 @@
+ajax_commands:
+  js:
+    js/page_reload.js: {}
+  dependencies:
+    - core/drupal.ajax
